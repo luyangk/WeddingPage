@@ -19,41 +19,6 @@
             -webkit-animation: slideToTop .8s 0.3s ease both;
         }
     </style>
-    
-    <script>
-      //Mango-WeixinJsSDK   2015-1-12  
-      wx.config({
-        //debug: true,
-        appId: 'wxf0cb435382253265',
-        timestamp:1489985105,
-        nonceStr: 'HxeGigdgfedP4TVx',
-        signature: 'fe2824eeb3ec09d20ac282b1813c78bffba6f886',
-        jsApiList: [
-        'onMenuShareTimeline',
-        'onMenuShareAppMessage',
-        'onMenuShareQQ',
-        'onMenuShareWeibo'
-        ]
-      });
-      wx.ready(function () {
-        var shareData = {
-                title: window.title,
-                desc: '2017年05月01日诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦',
-                link: window.location.href,
-                imgUrl: 'http://luccalu.top/WeddingPage/img/share.jpg'
-        }
-        
-        wx.onMenuShareAppMessage(shareData);
-        wx.onMenuShareTimeline(shareData);
-        wx.onMenuShareQQ(shareData);
-        wx.onMenuShareWeibo(shareData);
-      });
-      
-      wx.error(function (res) {
-        alert(res.errMsg);
-      });
-    </script>
-    
 </head>
 <body>
 <div style='margin:0 auto;display:none;'>
