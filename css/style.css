@@ -197,7 +197,7 @@ html, body {
 .title5 {
     width: 100%;
     text-align: center;
-    padding-top: 142%;
+    padding-top: 138%;
     color: #000;
     font-size: 150%;
     opacity: 1;
@@ -206,7 +206,7 @@ html, body {
 .subtitle5 {
     width: 100%;
     text-align: center;
-    padding-top: 5;
+    padding-top: 2%;
     color: #000;
     font-size: 120%;
     opacity: 1;
@@ -233,7 +233,7 @@ html, body {
 .arrow{
     position: absolute;
     left: 50%;
-    bottom: 10px;
+    bottom: 3%;
     width: 33px;
     height: 18px;
     margin-left: -16px;
