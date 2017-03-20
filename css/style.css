@@ -37,7 +37,7 @@ html, body {
     -o-background-size:cover;
     background-size:cover;
     background-color: #FFF;
-    padding-top: 100%;
+    padding-top: 0%;
     padding-left: 0%;
 }
 
@@ -50,7 +50,7 @@ html, body {
     background-size:cover;
     */
     background-color: #FFF;
-    margin-top: -100%;
+    margin-top: 0%;
 }
 
 .page:nth-child(3) {
@@ -93,8 +93,11 @@ html, body {
 }
 
 .text_box1 {
+    display: inline;
+    position: absolute;
     width: 100%;
     height: 16%;
+    margin-top: 100%;
     background-color: rgba(0%, 0%, 0%, 0.4);
 }
 
