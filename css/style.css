@@ -171,9 +171,9 @@ html, body {
 .title4 {
     width: 100%;
     text-align: center;
-    padding-top: 70%;
+    padding-top: 66.5%;
     color: #000;
-    font-size: 200%;
+    font-size: 180%;
     opacity: 1;
 }
 
@@ -197,18 +197,18 @@ html, body {
 .title5 {
     width: 100%;
     text-align: center;
-    padding-top: 138%;
+    padding-top: 135%;
     color: #000;
-    font-size: 150%;
+    font-size: 135%;
     opacity: 1;
 }
 
 .subtitle5 {
     width: 100%;
     text-align: center;
-    padding-top: 2%;
+    padding-top: 1%;
     color: #000;
-    font-size: 120%;
+    font-size: 115%;
     opacity: 1;
 }
 
