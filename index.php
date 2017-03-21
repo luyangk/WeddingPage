@@ -1,4 +1,5 @@
 <?php
+info();
 class JSSDK {
   private $appId;
   private $appSecret;
