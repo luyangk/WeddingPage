@@ -164,6 +164,7 @@ $signPackage = $jssdk->GetSignPackage();
             ]
         });
 
+        /*
         wx.onMenuShareAppMessage({
             title: window.title, // 分享标题
             desc: '2017年05月01日诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦', // 分享描述
@@ -178,7 +179,8 @@ $signPackage = $jssdk->GetSignPackage();
                 // 用户取消分享后执行的回调函数
             }
         });
-
+        */
+        
         wx.ready(function () {
             // 在这里调用 API
             var shareData = {
