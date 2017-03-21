@@ -82,6 +82,7 @@ class JSSDK {
   }
 
   private function httpGet($url) {
+    /*
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_TIMEOUT, 500);
@@ -91,6 +92,24 @@ class JSSDK {
     curl_close($curl);
 
     return $res;
+    */
+
+
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL,$url);
+    // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)');
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    curl_setopt($ch, CURLOPT_AUTOREFERER, 1);
+    // curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $temp = curl_exec($ch);
+    curl_close($ch);
+    return $temp;
+
   }
 }
 
@@ -126,6 +145,7 @@ $signPackage = $jssdk->GetSignPackage();
     
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script>
+
         wx.config({
             appId: '<?php echo $signPackage["appId"];?>',
             timestamp: <?php echo $signPackage["timestamp"];?>,
@@ -139,6 +159,7 @@ $signPackage = $jssdk->GetSignPackage();
                 'onMenuShareWeibo'
             ]
         });
+
         wx.ready(function () {
             // 在这里调用 API
             var shareData = {
