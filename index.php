@@ -180,15 +180,22 @@ $signPackage = $jssdk->GetSignPackage();
             }
         });
         */
-        
+
         wx.ready(function () {
             // 在这里调用 API
             var shareData = {
                 title: window.title,
                 desc: '2017年05月01日诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦',
                 link: window.location.href,
-                imgUrl: 'http://luccalu.top/WeddingPage/img/share.jpg'
-            } 
+                imgUrl: 'http://luccalu.top/WeddingPage/img/share.jpg',
+                type: 'link',
+                success: function () { 
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            }
         
             wx.onMenuShareAppMessage(shareData);
             wx.onMenuShareTimeline(shareData);
