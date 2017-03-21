@@ -131,7 +131,7 @@ $signPackage = $jssdk->GetSignPackage();
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta name="format-detection" content="telephone=no, email=no">
     <title>Wedding Invitation 陆阳&amp;牛牛</title>
-    <meta name="description" content="我们结婚啦-陆阳&amp;牛牛">
+    <meta name="description" content="2017年05月01日晚17:28诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦" />
     <link rel="stylesheet" href="./css/style.css"/>
     <!--custom style-->
     <style>
@@ -219,9 +219,9 @@ $signPackage = $jssdk->GetSignPackage();
             //wx.onMenuShareWeibo(shareData);
         });
 
-        wx.error(function (res) {
-            alert(res.errMsg);
-        });
+        //wx.error(function (res) {
+        //    alert(res.errMsg);
+        //});
     </script>
     
 </head>
