@@ -183,6 +183,7 @@ $signPackage = $jssdk->GetSignPackage();
 
         wx.ready(function () {
             // 在这里调用 API
+            /*
             var shareData = {
                 title: window.title,
                 desc: '2017年05月01日诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦',
@@ -196,11 +197,25 @@ $signPackage = $jssdk->GetSignPackage();
                     // 用户取消分享后执行的回调函数
                 }
             }
-        
-            wx.onMenuShareAppMessage(shareData);
-            wx.onMenuShareTimeline(shareData);
-            wx.onMenuShareQQ(shareData);
-            wx.onMenuShareWeibo(shareData);
+            */
+
+            wx.onMenuShareAppMessage({
+                title: '陆阳 & 牛牛', // 分享标题
+                desc: '2017年05月01日晚17:28诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦', // 分享描述
+                link: window.location.href, // 分享链接
+                imgUrl: 'http://luccalu.top/WeddingPage/img/share.jpg', // 分享图标
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                //dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () { 
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+            //wx.onMenuShareTimeline(shareData);
+            //wx.onMenuShareQQ(shareData);
+            //wx.onMenuShareWeibo(shareData);
         });
 
         wx.error(function (res) {
