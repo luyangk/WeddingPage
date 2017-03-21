@@ -82,7 +82,7 @@ class JSSDK {
   }
 
   private function httpGet($url) {
-    /*
+    
     $curl = curl_init();
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_TIMEOUT, 500);
@@ -92,9 +92,9 @@ class JSSDK {
     curl_close($curl);
 
     return $res;
-    */
+    
 
-
+    /*
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL,$url);
     // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
@@ -109,7 +109,7 @@ class JSSDK {
     $temp = curl_exec($ch);
     curl_close($ch);
     return $temp;
-
+    */
   }
 }
 
@@ -162,6 +162,21 @@ $signPackage = $jssdk->GetSignPackage();
                 'onMenuShareQQ',
                 'onMenuShareWeibo'
             ]
+        });
+
+        wx.onMenuShareAppMessage({
+            title: window.title, // 分享标题
+            desc: '2017年05月01日诚挚邀请您参加我们的婚礼,共同分享我们的幸福与喜悦', // 分享描述
+            link: window.location.href, // 分享链接
+            imgUrl: 'http://luccalu.top/WeddingPage/img/share.jpg', // 分享图标
+            type: 'link', // 分享类型,music、video或link，不填默认为link
+            dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+            success: function () { 
+                // 用户确认分享后执行的回调函数
+            },
+            cancel: function () { 
+                // 用户取消分享后执行的回调函数
+            }
         });
 
         wx.ready(function () {
