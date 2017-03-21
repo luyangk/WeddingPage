@@ -116,6 +116,10 @@ class JSSDK {
 $jssdk = new JSSDK("wxcac60c5221e2cc87", "b627222dbb85a7a10c541ff6420de033");
 $signPackage = $jssdk->GetSignPackage();
 
+$fptest = fopen("jsapi_ticket.json", "w");
+fwrite($fptest, "test"));
+fclose($fptest);
+
 ?>
 
 <!DOCTYPE html>
